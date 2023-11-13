@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | NFT preview card component</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,6 +23,7 @@
           colors: {
             'soft-blue': 'hsl(215, 51%, 70%)',
             cyan: 'hsl(178, 100%, 50%)',
+            'cyan-opacity': 'hsla(178, 100%, 50%, 0.5)',
             'Very-dark-blue-main-BG': 'hsl(217, 54%, 11%)',
             'Very-dark-blue-card-BG': 'hsl(216, 50%, 16%)',
             'Very-dark-blue-line': 'hsl(215, 32%, 27%)',
@@ -41,13 +42,19 @@
 </head>
 <body class="bg-Very-dark-blue-main-BG font-display flex justify-center items-center min-h-screen">
   <div class="container bg-Very-dark-blue-card-BG flex flex-col w-[327px] h-[543px] desktop:w-[350px] desktop:h-[596px] rounded-[15px] p-[24px] shadow-[0px_25px_50px_0px_rgba(0,0,0,0.1)]">
-    <img src="images/image-equilibrium.jpg" alt="equilibrium" class="container-img w-[278px] h-[278px] rounded-[8px]">
+    <div class="container">
+      <img src="images/image-equilibrium.jpg" alt="equilibrium" class="container-img hover:bg-sky-700 w-[278px] h-[278px] desktop:w-[302px] desktop:h-[302px] rounded-[8px] ">
+      <div class="overlay "></div>
+    </div>
+    
 
-    <h1 class="container-title mt-[24px] text-white text-[22px] font-[600] ">Equilibrium #3429</h1>
+    <div class="header-wrapper mt-[24px]">
+      <h1 class="container-title text-white hover:text-cyan cursor-pointer text-[22px] font-[600] inline">Equilibrium #3429</h1>
+    </div>
   
-    <p class="container-paragraph mt-[12px] text-soft-blue text-[18px] font-[300]">Our Equilibrium collection promotes balance and calm.</p>
+    <p class="container-paragraph mt-[12px] desktop:mt-[16px] text-soft-blue text-[18px] font-[300]">Our Equilibrium collection promotes balance and calm.</p>
   
-    <div class="container-digits mt-[16px] flex justify-between">
+    <div class="container-digits mt-[16px] desktop:mt-[24px] flex justify-between">
       <div class="digits--values flex">
         <div class="mr-[6.5px]">
           <img src="images/icon-ethereum.svg" alt="icon-ethereum" class="digits-value__icon">
@@ -61,9 +68,9 @@
         <p class="digits--dayCounting text-soft-blue text-[15px] font-[400]">3 days left</p>
       </div>
     </div>
-    <div class="individual mt-[16px] pt-[16px] border-t-[1px] border-Very-dark-blue-line flex ">
+    <div class="individual mt-[16px] desktop:mt-[24px] pt-[16px] border-t-[1px] border-Very-dark-blue-line flex ">
       <img src="images/image-avatar.png" alt="avatar" class="individual-avatar w-[33px] h-[33px] rounded-[33px] border border-white">
-      <p class="ml-[16px] text-soft-blue text-[15px] font-[400]">Creation of <span class="ml-[5px] text-white">Jules Wyvern</span></p>
+      <p class="ml-[16px] text-soft-blue text-[15px] font-[400]">Creation of <span class="ml-[5px] text-white hover:text-cyan cursor-pointer">Jules Wyvern</span></p>
     </div>
   </div>
 
